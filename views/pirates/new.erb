@@ -1,1 +1,45 @@
-<h1>Make your form here</h1>
+<form method="post" action="/pirates">
+  <p>Enter Pirate Info:</p>
+  <label for="pirate[name]">Pirate Name</label>
+  <textarea name="pirate[name]"></textarea>
+  <br>
+  <label for="pirate[height]">Pirate Height</label>
+  <textarea name="pirate[height]"></textarea>
+  <br>
+  <label for="pirate[weight]">Pirate Weight</label>
+  <textarea name="pirate[weight]"></textarea>
+  <br>
+  <br>
+
+  <p> Enter Ship1 Info:  </p>
+  <label for="pirate[ships][][name]">Ship Name</label>
+  <textarea  id="ship_name_1" name="pirate[ships][][name]"></textarea>
+  <br>
+  <label for="pirate[ships][][type]">Ship Type</label>
+  <textarea id="ship_type_1" name="pirate[ships][][type]"></textarea>
+  <br>
+  <label for="pirate[ships][][booty]">Ship Booty</label>
+  <textarea id="ship_booty_1" name="pirate[ships][][booty]"></textarea>
+
+  <br>
+  <br>
+
+  <p>Enter Ship2 Info:  </p>
+  <label for="pirate[ships][][name]">Ship Name</label>
+  <textarea id="ship_name_2"  name="pirate[ships][][name]"></textarea>
+  <br>
+  <label for="pirate[ships][][type]">Ship Type</label>
+  <textarea  id="ship_type_2"name="pirate[ships][][type]"></textarea>
+  <br>
+  <label for="pirate[ships][][booty]">Ship Booty</label>
+  <textarea  id="ship_booty_2" name="pirate[ships][][booty]"></textarea>
+
+  <br>
+  <br>
+
+
+
+
+
+  <button type="submit" value="submit">Submit</button>
+</form>
