@@ -3,7 +3,29 @@ require './environment'
 module FormsLab
   class App < Sinatra::Base
 
-    # code other routes/actions here
+    #code other routes/actions here
 
-  end
-end
+    get "/" do
+      erb :root
+    end
+
+    get "/new" do
+      erb :"pirates/new"
+    end
+
+    post '/pirates' do
+      @pirate = Pirate.new(params[:pirate])
+      # binding.pry
+        params[:pirate][:ships].each do |details|
+          #binding.pry
+          Ship.new(details)
+      end
+
+      @ships = Ship.all
+      #binding.pry
+      erb :"pirates/show"
+    end
+
+
+  end # end of App Class
+end # end of FormsLab Module
