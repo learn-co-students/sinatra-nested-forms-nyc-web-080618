@@ -13,7 +13,7 @@ module FormsLab
       erb :'pirates/new' #navigates in the view file directory
     end
 
- # here we are creating Pirates and Ships
+ # here we are creating Pirates and Ships instances
 
    post '/pirates' do
        @pirates = Pirate.new(params[:pirate])
@@ -23,5 +23,5 @@ module FormsLab
          @ship = Ship.all
          erb :'pirates/show'
        end
-     end
+    end
 end
