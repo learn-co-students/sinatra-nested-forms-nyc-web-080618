@@ -5,5 +5,23 @@ module FormsLab
 
     # code other routes/actions here
 
-  end
+    get '/' do
+      erb :root
+    end
+
+    get '/new' do
+      erb :'pirates/new' #navigates in the view file directory
+    end
+
+ # here we are creating Pirates and Ships
+
+   post '/pirates' do
+       @pirates = Pirate.new(params[:pirate])
+         params[:pirate][:ships].each do |ship|
+          Ship.new(ship)
+        end
+         @ship = Ship.all
+         erb :'pirates/show'
+       end
+     end
 end
